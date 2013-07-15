@@ -1,7 +1,7 @@
-from django.http import HttpResponse
 from django.views.generic.base import View
+from django.shortcuts import render
 
 class Index(View):
     def get(self, request):
-        return HttpResponse("This is the bookwork homepage template")
+        return render(request, 'homepage/index.html')
 
