@@ -2,6 +2,6 @@ from django.conf.urls import patterns, url
 
 from homepage import views
 
-urlpattersn = patterns('',
-    url(r'^$', views.index, name='index')
+urlpatterns = patterns('',
+    url(r'^$', views.Index.as_view(), name='index')
 )

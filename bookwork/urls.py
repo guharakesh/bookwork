@@ -6,7 +6,8 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'homepage.views.index', name='index'),
+    # url(r'^$', 'homepage.views.IndexView.as_view()', name='index'),
+    url(r'^$', include('homepage.urls', namespace="homepage")),
     # url(r'^', include('homepage.urls', namespace="homepage")),
     # url(r'^bookwork/', include('bookwork.foo.urls')),
 

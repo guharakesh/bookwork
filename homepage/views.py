@@ -1,4 +1,7 @@
 from django.http import HttpResponse
+from django.views.generic.base import View
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the bookwork homepage.")
+class Index(View):
+    def get(self, request):
+        return HttpResponse("This is the bookwork homepage template")
+
